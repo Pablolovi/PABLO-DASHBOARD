@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Mi Dashboard</title>
+        <link href="https://fonts.googleapis.com/css2?family=DSEG7+Classic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css"/>
+    </head>
+    <body>
+        <div class="main-container">
+            <header class="header">
+                    <h1>Mi Dashboard</h1>
+                    <nav aria-label="Navegación principal">
+                        <ul>
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li><a href="clock.html">Reloj</a></li>
+                            <li><a href="links.html">Enlaces Rápidos</a></li>
+                            <li><a href="password-generator.html">Generador de Contraseñas</a></li>
+                            <li><a href="weather.html">Clima</a></li>
+                        </ul>
+                    </nav>
+            </header>
+            <section class="clock">
+                <h2>Reloj</h2>
+                <div id="current-time"></div>
+            </section>
+            <section class="password-generator">
+                <h2>Generador de Contraseñas</h2>
+                <div id="generated-password"></div>
+                <button id="generate-password">Generar Contraseña</button>
+            </section>
+            <section class="weather">
+                <div class="weather-header">
+                    <h2>Clima</h2>
+                    <div id="current-weather"></div>
+                </div>
+                <div class="forecast-container">
+                    <h2>Prevision por horas</h2>
+                    <div id="forecast"></div>
+                </div>
+            </section>
+            <section class="links">
+                <h2>Enlaces Rápidos</h2>
+                <div class="label-title-container">
+                    <!--Inpunts para añadir nuevos enlaces-->
+                    <label for="link-title">Título:</label>
+                    <input type="text" id="link-title" placeholder="Nombre del enlace"/>
+                </div>
+                <div class="label-url-container">
+                    <label for="link-url">URL:</label>
+                    <input type="url" id="link-url" placeholder="https://ejemplo.com"/>
+                    <button id="add-link">Añadir Link</button>
+                </div>
+                
+                <div class="list-link-container">
+                    <!--Lista de enlaces dinámicos-->
+                    <ul id="links-list"></ul>
+                </div>
+            </section>
+            <section class="popup">
+                <h2>Mensajes</h2>
+                <!--Mensajes pop up-->
+                <div id="popup-message" class="popup">
+                    <div class="popup-content">
+                        <p id="popup-text"></p>
+                    </div>
+                </div>
+            </section> 
+        </div>
+        
+        
+        <script src="js/clock.js"></script>
+        <script src="js/links.js"></script>
+        <script src="js/password-generator.js"></script>
+        <script src="js/weather.js"></script>
+        <script src="js/background.js"></script>
+    </body>
+</html>
